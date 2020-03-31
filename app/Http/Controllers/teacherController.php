@@ -11,7 +11,7 @@ class teacherController extends Controller
     //后台获取教师列表
     public function teacherList(Request $request)
     {
-        if(property_exists($request,'pageSize')) {
+        if (property_exists($request, 'pageSize')) {
             $pageSize = $request->pageSize;
             $pageNum = $request->pageNum;
             $result = DB::table('teacher')->skip($pageSize * ($pageNum - 1))->take(
@@ -19,27 +19,31 @@ class teacherController extends Controller
             )->whereNull('deleted_at')->orderBy('id', 'desc')->get();
             $count = teacher::all()->count();
         } else {
-            $result = DB::table('teacher')->whereNull('deleted_at')->orderBy('id','desc')->get();
+            $result = DB::table('teacher')->whereNull('deleted_at')->orderBy('id', 'desc')->get();
             $count = $result->count();
         }
         return json_encode(
             [
-                'resultCode'    => 0,
+                'resultCode' => 0,
                 'resultMessage' => '获取教师列表成功',
-                'data'          => $result,
-                'total'         => $count,
+                'data' => $result,
+                'total' => $count,
             ]
         );
     }
+
     // 前端获取教师详情
     public function teacherDetail(Request $request)
     {
         $result = teacher::find($request['id']);
+        $commentList = DB::table('teacher_comment')->where('teacher_id', '=', $request->id)->whereNull('deleted_at')->orderBy('id', 'desc')->get();
+
         return json_encode(
             [
-                'resultCode'    => 0,
+                'resultCode' => 0,
                 'resultMessage' => '获取教师列表成功',
-                'data'          => $result,
+                'data' => $result,
+                'commentList' => $commentList
             ]
         );
     }
@@ -50,9 +54,9 @@ class teacherController extends Controller
         $result = teacher::all();
         return json_encode(
             [
-                'resultCode'    => 0,
+                'resultCode' => 0,
                 'resultMessage' => '获取教师列表成功',
-                'data'          => $result,
+                'data' => $result,
             ]
         );
     }
@@ -61,14 +65,14 @@ class teacherController extends Controller
     public function teacherAdd(Request $request)
     {
 
-        $teacher          = new teacher;
+        $teacher = new teacher;
         $teacher->name = $request->name;
         $teacher->photo = $request->photoUrl;
         $teacher->rate = $request->rate;
         $teacher->desc = $request->desc;
         $teacher->impression = $request->impression;
         $teacher->good_at = $request->good_at;
-        if(property_exists($request,'deeds')) {
+        if (property_exists($request, 'deeds')) {
 
             $teacher->deeds = $request->deeds;
         }
@@ -76,15 +80,16 @@ class teacherController extends Controller
 
         return json_encode(
             [
-                'resultCode'    => 0,
+                'resultCode' => 0,
                 'resultMessage' => '新增教师成功',
-                'data'          => []
+                'data' => []
             ]
         );
     }
 
     // 编辑教师详情
-    public function teacherUpdate(Request $request) {
+    public function teacherUpdate(Request $request)
+    {
         $teacher = teacher::find($request['id']);
         $teacher->name = $request->name;
         $teacher->photo = $request->photoUrl;
@@ -93,23 +98,24 @@ class teacherController extends Controller
         $teacher->impression = $request->impression;
         $teacher->good_at = $request->good_at;
         $teacher->deeds = $request->deeds;
-        if($teacher->save()) {
+        if ($teacher->save()) {
             return json_encode(
                 [
-                    'resultCode'    => 0,
+                    'resultCode' => 0,
                     'resultMessage' => '修改成功',
-                    'data'          => []
+                    'data' => []
                 ]
             );
         }
         return json_encode(
             [
-                'resultCode'    => 0,
+                'resultCode' => 0,
                 'resultMessage' => '修改失败',
-                'data'          => []
+                'data' => []
             ]
         );
     }
+
     // 删除
     public function teacherDelete(Request $request)
     {
@@ -118,18 +124,18 @@ class teacherController extends Controller
         if ($teacher->delete()) {
             return json_encode(
                 [
-                    'resultCode'    => 0,
+                    'resultCode' => 0,
                     'resultMessage' => '删除成功',
-                    'data'          => []
+                    'data' => []
                 ]
             );
         }
 
         return json_encode(
             [
-                'resultCode'    => 1,
+                'resultCode' => 1,
                 'resultMessage' => '删除失败',
-                'data'          => []
+                'data' => []
             ]
         );
 

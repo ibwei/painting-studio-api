@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="173a4bd1-0113-4402-89d2-eae85f54b78a" name="pinxianhs" url="http://111.229.132.102">
+        <fileTransfer host="111.229.132.102" port="22" rootFolder="/data/wwwroot/www.paintingapi.pinxianhs.com" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

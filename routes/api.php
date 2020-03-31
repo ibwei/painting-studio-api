@@ -12,6 +12,7 @@
  */
 
 Route::post('/user/login', 'AuthController@login');//登录
+Route::post('/user/register', 'AuthController@register');//注册
 
 // 需要token的路由 ----------------------------------
 
@@ -180,6 +181,24 @@ Route::group(
     Route::post(
         '/course/list',
         'CourseController@list'
+    );
+
+    Route::post(
+        '/article/comment/add',
+        'ArticleCommentController@add'
+    );
+    Route::post(
+        '/article/comment/delete',
+        'ArticleCommentController@delete'
+    );
+
+    Route::post(
+        '/teacher/comment/add',
+        'TeacherCommentController@add'
+    );
+    Route::post(
+        '/teacher/comment/delete',
+        'TeacherCommentController@delete'
     );
 
 },
