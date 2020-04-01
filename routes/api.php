@@ -200,6 +200,18 @@ Route::group(
         '/teacher/comment/delete',
         'TeacherCommentController@delete'
     );
+    Route::post(
+        '/schedule/add',
+        'ScheduleController@add'
+    );
+    Route::post(
+        '/schedule/update',
+        'ScheduleController@update'
+    );
+    Route::post(
+        '/schedule/delete',
+        'ScheduleController@delete'
+    );
 
 },
 
@@ -295,6 +307,10 @@ Route::group(
     Route::post(
         '/statistics/logout',
         'StatisticsController@logout'
+    ),
+    Route::post(
+        '/schedule/list',
+        'ScheduleController@list'
     )
 
 );

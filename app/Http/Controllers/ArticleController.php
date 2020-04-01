@@ -10,7 +10,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ArticleController extends Controller
 {
-    //
+
     public function articleList(Request $request)
     {
         $pageSize = $request->pageSize;
