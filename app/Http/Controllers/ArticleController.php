@@ -128,7 +128,6 @@ class ArticleController extends Controller
             ]
         );
 
-
     }
 
     //前端页面所需要的参数

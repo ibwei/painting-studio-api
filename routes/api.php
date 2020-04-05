@@ -21,7 +21,11 @@ Route::group(
 
     Route::post('/user/getUserInfo', 'AuthController@getUserInfo');//获取用户信息
     Route::post('/user/logout', 'AuthController@logout');//退出
+    Route::post('/user/list', 'AuthController@list');
+    Route::post('/user/update', 'AuthController@update');
+    Route::post('/user/delete', 'AuthController@delete');
     Route::post('/dashboard', 'DashboardController@index');//主板面信息
+
 
     //反馈模块
     Route::post(
@@ -191,15 +195,34 @@ Route::group(
         '/article/comment/delete',
         'ArticleCommentController@delete'
     );
+    Route::post(
+        '/article/comment/list',
+        'ArticleCommentController@list'
+    );
+    Route::post(
+        '/article/comment/update',
+        'ArticleCommentController@update'
+    );
+
+    // teacher
 
     Route::post(
         '/teacher/comment/add',
         'TeacherCommentController@add'
     );
     Route::post(
+        '/teacher/comment/list',
+        'TeacherCommentController@list'
+    );
+    Route::post(
+        '/teacher/comment/update',
+        'TeacherCommentController@update'
+    );
+    Route::post(
         '/teacher/comment/delete',
         'TeacherCommentController@delete'
     );
+
     Route::post(
         '/schedule/add',
         'ScheduleController@add'
@@ -211,6 +234,31 @@ Route::group(
     Route::post(
         '/schedule/delete',
         'ScheduleController@delete'
+    );
+
+    Route::post(
+        '/bookschedule/add',
+        'BookScheduleController@add'
+    );
+    Route::post(
+        '/bookschedule/update',
+        'BookScheduleController@update'
+    );
+    Route::post(
+        '/bookschedule/list',
+        'BookScheduleController@list'
+    );
+    Route::post(
+        '/bookschedule/delete',
+        'BookScheduleController@delete'
+    );
+    Route::post(
+        '/bookschedule/personalList',
+        'BookScheduleController@personalList'
+    );
+    Route::post(
+        '/bookschedule/detail',
+        'BookScheduleController@detail'
     );
 
 },

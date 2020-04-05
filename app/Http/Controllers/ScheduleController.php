@@ -5,13 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ScheduleController extends Controller
 {
     public function list()
     {
-
 
         $result = DB::table('schedule')->whereNull('deleted_at')->orderBy('day')->orderBy(
             'time'
@@ -68,28 +66,20 @@ class ScheduleController extends Controller
     public function update(Request $request)
     {
 
-        $schedule = schedule::find($request['id']);
-        $schedule['day'] = $request['day'];
-        $schedule['time'] = $request['time'];
-        $schedule['status'] = $request['status'];
-        if ($schedule->save()) {
 
-            return json_encode(
-                [
-                    'resultCode' => 0,
-                    'resultMessage' => '更新日程成功',
-                    'data' => []
-                ]
-            );
-        }
+        Schedule::updateOrCreate(
+            ['day' => $request['day'], 'time' => $request['time']],
+            ['status' => $request['status']]
+        );
 
         return json_encode(
             [
-                'resultCode' => 1,
-                'resultMessage' => '更新日程失败',
+                'resultCode' => 0,
+                'resultMessage' => '更新成功',
                 'data' => []
             ]
         );
+
     }
 
     public function delete(Request $request)

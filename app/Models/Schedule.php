@@ -12,4 +12,5 @@ class Schedule extends Model
 
     protected $table = 'schedule';
     protected $dates = ['deleted_at'];
+    protected $guarded = [];
 }
