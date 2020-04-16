@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Hamcrest\Core\IsNull;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
@@ -199,7 +198,8 @@ class ArticleController extends Controller
     public function articleDetail(Request $request)
     {
 
-        //$result = Article::find($request['id']);
+        $pageSize = $request->pageSize;
+        $pageNum = $request->pageNum;
 
 
         $result = DB::table('article')
@@ -218,7 +218,9 @@ class ArticleController extends Controller
             )->whereNull('article.deleted_at')
             ->get();
 
-        $commentList = DB::table('article_comment')->where('article_id', '=', $request->id)->whereNull('deleted_at')->orderBy('id', 'desc')->get();
+        $commentList = DB::table('article_comment')->join('users','user_id','=','users.id')->select('article_comment.id','article_comment.content','article_comment.article_id','users.name','users.avatar','article_comment.created_at')->where([['article_id', '=', $request->id],['article_comment.status','=',1]])->skip($pageSize * ($pageNum - 1))->take(
+            $pageSize
+        )->whereNull('article_comment.deleted_at')->orderBy('article_comment.created_at', 'desc')->get();
 
         if (count($result) > 0) {
             return json_encode(

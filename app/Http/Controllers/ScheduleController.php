@@ -67,10 +67,8 @@ class ScheduleController extends Controller
     {
 
 
-        Schedule::updateOrCreate(
-            ['day' => $request['day'], 'time' => $request['time']],
-            ['status' => $request['status']]
-        );
+        DB::table('schedule')->where([['day','=',$request['day']], ['time', '=', $request['time']]])->update(['status' => $request['status']]);
+
 
         return json_encode(
             [

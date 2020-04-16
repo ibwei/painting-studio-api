@@ -7,6 +7,7 @@ use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Tymon\JWTAuth\Facades\JWTAuth;
+
 class AuthController extends Controller
 {
 
@@ -22,7 +23,7 @@ class AuthController extends Controller
 
         $result = DB::table('users')->skip($pageSize * ($pageNum - 1))->take(
             $pageSize
-        )->whereNull('deleted_at')->where('status', '=', 1)->orderBy('created_at', 'desc')->orderBy(
+        )->whereNull('deleted_at')->orderBy('created_at', 'desc')->orderBy(
             'updated_at', 'ase'
         )->get();
 
@@ -46,7 +47,11 @@ class AuthController extends Controller
         $username = $request->username;
         $password = $request->password;
         $user_mes = Users::where([['name', '=', $username], ['status', '=', 1]])->first();
-        $type = empty($request['type']) ? 1 : 0;
+        if (isset($request['type'])) {
+            $type = $request['type'];
+        } else {
+            $type = 1;
+        }
         if ($type == 1 && $user_mes['is_admin'] != 1) {
             return json_encode(
                 [
@@ -91,6 +96,7 @@ class AuthController extends Controller
                 'resultMessage' => '登录成功',
                 'data' => [
                     'token' => $token,
+                    'user' => $user_mes
                 ]
             ]
         );
@@ -133,16 +139,16 @@ class AuthController extends Controller
     //注册
     public function register(Request $request)
     {
-        if (empty($request->name) || empty($request->password)) {
+        if (!isset($request->username) || !isset($request->password)) {
             return json_encode(
                 [
                     'resultCode' => 1,
-                    'resultMessage' => '注册失败,请仔细检查参数',
+                    'resultMessage' => '注册失败,缺乏必要参数',
                 ]
             );
         }
 
-        $user_mes = Users::where('name', '=', $request->name)->first();
+        $user_mes = Users::where('name', '=', $request->username)->first();
         if ($user_mes) {
             return json_encode(
                 [
@@ -153,18 +159,15 @@ class AuthController extends Controller
         }
 
         $user = new Users;
-        $user->name = $request->name;
+        $user->name = $request['username'];
         $user->password = md5($request->password);
-        $user->email = empty($request->email) ? '' : $request->email;
-        $user->phone = empty($request->phone) ? '' : $request->phone;
+        $user->email = isset($request->email) ? '' : $request->email;
+        $user->phone = isset($request->phone) ? '' : $request->phone;
+        $user->avatar = 'http://img.pinxianhs.com/timg.jpeg';
+        $user->is_admin = $request['type'];
         if ($user->save()) {
-            return json_encode(
-                [
-                    'resultCode' => 0,
-                    'resultMessage' => '注册成功',
-                    'data' => []
-                ]
-            );
+            return $this->login($request);
+
         }
         return json_encode(
             [
@@ -176,13 +179,16 @@ class AuthController extends Controller
 
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $user = Users::find($request['id']);
+        $user->status = $request['status'];
+        $user->is_admin = $request['is_admin'];
         if ($user->save()) {
             return json_encode(
                 [
                     'resultCode' => 0,
-                    'resultMessage' => '用户删除成功',
+                    'resultMessage' => '处理成功',
                     'data' => []
                 ]
             );
@@ -191,7 +197,7 @@ class AuthController extends Controller
         return json_encode(
             [
                 'resultCode' => 1,
-                'resultMessage' => '用户删除失败',
+                'resultMessage' => '处理失败',
                 'data' => []
             ]
         );

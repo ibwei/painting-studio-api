@@ -21,9 +21,8 @@ class BookScheduleController extends Controller
                 $result = DB::table('book_schedule')->join('users', 'book_schedule.user_id', '=', 'users.id')->join('schedule', 'book_schedule.schedule_id', '=', 'schedule.id')->select('book_schedule.schedule_id', 'email', 'phone', 'avatar', 'day', 'time', 'book_schedule.status', 'book_schedule.created_at', 'users.name')->whereDate('book_schedule.created_at', date("Y-m-d"))->whereNull('book_schedule.deleted_at')->orderBy('schedule.day')->orderBy('schedule.time')->get();
             } else if ($type == 'week') {
                 $endLastWeek = Carbon::now()->subWeek(0)->startOfWeek();
-                $result = DB::table('book_schedule')->join('users', 'book_schedule.user_id', '=', 'users.id')->join('schedule', 'book_schedule.schedule_id', '=', 'schedule.id')->select('book_schedule.schedule_id', 'email', 'phone', 'avatar', 'day', 'time', 'book_schedule.status', 'book_schedule.created_at', 'users.name')->whereNull('book_schedule.deleted_at')->where('book_schedule.created_at', '>=', $endLastWeek)->orderBy('schedule.day')->orderBy('schedule.time')->get();
+                $result = DB::table('book_schedule')->join('users', 'book_schedule.user_id', '=', 'users.id')->join('schedule', 'book_schedule.schedule_id', '=', 'schedule.id')->select('book_schedule.schedule_id', 'email', 'phone', 'avatar', 'day', 'time', 'book_schedule.status', 'book_schedule.created_at', 'users.name')->whereNull('book_schedule.deleted_at')->where([['book_schedule.created_at', '>=', $endLastWeek],['book_schedule.status','=',1]])->orderBy('schedule.day')->orderBy('schedule.time')->get();
             } else {
-
                 $pageSize = $request->pageSize;
                 $pageNum = $request->pageNum;
                 $result = DB::table('book_schedule')->join('users', 'book_schedule.user_id', '=', 'users.id')->join('schedule', 'book_schedule.schedule_id', '=', 'schedule.id')->select('book_schedule.id', 'book_schedule.schedule_id', 'email', 'phone', 'avatar', 'day', 'time', 'book_schedule.status', 'book_schedule.created_at', 'users.name')->skip($pageSize * ($pageNum - 1))->take(
@@ -84,7 +83,6 @@ class BookScheduleController extends Controller
             );
         }
 
-
     }
 
     public function personalList()
@@ -103,7 +101,7 @@ class BookScheduleController extends Controller
     }
 
 
-    // 增加预约功能
+    // 增加预约
     public function add(Request $request)
     {
 

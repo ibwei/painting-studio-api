@@ -37,7 +37,7 @@ class TeacherCommentController extends Controller
         );
     }
 
-    //新增文章评论
+    //新增教师评论
     public function add(Request $request)
     {
 
@@ -50,6 +50,7 @@ class TeacherCommentController extends Controller
         $articleComment['content'] = $request['content'];
         $articleComment['level'] = $request['level'];
         $articleComment['parent_id'] = $request['parent_id'];
+        $articleComment['star'] = $request['star'];
         if ($articleComment->save()) {
 
             return json_encode(

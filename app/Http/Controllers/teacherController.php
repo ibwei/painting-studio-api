@@ -32,11 +32,15 @@ class teacherController extends Controller
         );
     }
 
-    // 前端获取教师详情
+    // 前端获取教师评论详情
     public function teacherDetail(Request $request)
     {
+        $pageSize = $request->pageSize;
+        $pageNum = $request->pageNum;
         $result = teacher::find($request['id']);
-        $commentList = DB::table('teacher_comment')->where('teacher_id', '=', $request->id)->whereNull('deleted_at')->orderBy('id', 'desc')->get();
+        $commentList = DB::table('teacher_comment')->join('users','user_id','=','users.id')->select('teacher_comment.id','teacher_comment.content','teacher_comment.teacher_id','teacher_comment.level','users.name','users.avatar','teacher_comment.star','teacher_comment.created_at','teacher_comment.parent_id')->where([['teacher_id', '=', $request->id],['teacher_comment.status','=',1]])->skip($pageSize * ($pageNum - 1))->take(
+            $pageSize
+        )->whereNull('teacher_comment.deleted_at')->orderBy('teacher_comment.created_at', 'desc')->get();
 
         return json_encode(
             [
