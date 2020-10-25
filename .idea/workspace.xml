@@ -2,129 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56a9e594-5624-460a-89b7-266e2a546d5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AnnouncementController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Announcement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_21_003019_create_zsjj_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_05_07_073020_create_all_painttables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_05_07_073020_create_all_painttables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316260335.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316303368.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316304285.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316452716.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001131646375.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316552643.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316561747.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316571933.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011316592222.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011317203821.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011317240169.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011317274016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318003689.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318004979.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318010114.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318012574.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318013569.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001131801581.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318021955.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318024389.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318032516.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318033587.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318034690.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318035569.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318040649.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318041491.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318042824.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318044033.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318044982.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318050412.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318051351.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318052078.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001131805472.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318105624.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318110395.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318140224.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318192356.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318195455.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318220992.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318225598.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318231626.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318234033.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318235839.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318241412.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318245026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318251019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318290117.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318293660.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318295938.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318302154.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318304375.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011318310648.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319024667.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319035769.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319043383.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319045750.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319052711.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319080775.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319083980.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319093080.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319100479.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319105526.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319111678.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319114839.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319120664.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319123174.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319124752.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001131913077.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319141355.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319144996.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319154068.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319160716.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319162675.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319164546.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319174664.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319183829.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319192231.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319250187.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319265131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319501885.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319510483.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319521765.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319592621.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011319593512.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320000539.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320130289.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001132019282.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320213163.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320291689.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320324155.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_202001132033229.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320355651.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320404285.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320424312.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320464013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011320465294.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011322531946.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416450646.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416451043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416452264.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416452737.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416455357.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416455592.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011416455811.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011521042237.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011521044747.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011521050493.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823331898.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823340263.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823412836.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823420851.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823425124.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020011823432869.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202001/img_2020012023144121.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/202003/img_2020030618414534.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,14 +61,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnnouncementController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="98">
+              <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -220,18 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FeedbackController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -300,6 +176,7 @@
         <option value="$PROJECT_DIR$/app/Models/Announcement.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AnnouncementController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -431,21 +308,6 @@
               <item name="www.paintingapi.pinxianhs.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="www.paintingapi.pinxianhs.com" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="www.paintingapi.pinxianhs.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.paintingapi.pinxianhs.com" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www.paintingapi.pinxianhs.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.paintingapi.pinxianhs.com" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="www.paintingapi.pinxianhs.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.paintingapi.pinxianhs.com" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -533,12 +395,12 @@
       <workItem from="1601286784605" duration="263000" />
       <workItem from="1603215324732" duration="55000" />
       <workItem from="1603215393277" duration="400000" />
-      <workItem from="1603637040984" duration="3513000" />
+      <workItem from="1603637040984" duration="4442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65908000" />
+    <option name="totallyTimeSpent" value="66837000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -568,7 +430,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32911393" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25333333" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.48285714" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -925,11 +787,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnnouncementController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="98">
+          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
