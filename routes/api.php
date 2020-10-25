@@ -260,6 +260,10 @@ Route::group(
         '/bookschedule/detail',
         'BookScheduleController@detail'
     );
+    Route::post(
+        '/announcement/update',
+        'AnnouncementController@announcementUpdate'
+    );
 
 },
 
@@ -269,6 +273,10 @@ Route::group(
     //新增反馈
     Route::post(
         '/feedback/feedbackAdd', 'FeedbackController@feedbackAdd'
+    ),
+    Route::get(
+        '/announcement/list',
+        'AnnouncementController@getAnnouncement'
     ),
     //新增课程报名
     Route::post(

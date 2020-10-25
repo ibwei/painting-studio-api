@@ -30,6 +30,7 @@ class CreateAllPainttables  extends Migration
             $table->string('unionid', 50)->nullable(true)->default('')->comment('微信的unionid');
             $table->string('openid', 255)->nullable(true)->default('')->comment('用户唯一标识openid');
             $table->date('login_time')->nullable(true)->comment('记录用户最近一次登录时间');
+            $table->tinyInteger('is_admin')->default(0)->comment('0:学生,1;管理员:2:老师');
             $table->tinyInteger('status')->default(1)->comment('0:禁用,1:正常');
             $table->tinyInteger('deleted')->default(0)->comment("软删除标记");
             $table->timestamps();
