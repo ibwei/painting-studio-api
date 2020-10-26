@@ -274,10 +274,12 @@ Route::group(
     Route::post(
         '/feedback/feedbackAdd', 'FeedbackController@feedbackAdd'
     ),
+
     Route::get(
         '/announcement/list',
         'AnnouncementController@getAnnouncement'
     ),
+    Route::post('/getArticle', 'AnnouncementController@getArticle'),
     //新增课程报名
     Route::post(
         '/courseEnroll/courseEnrollAdd',

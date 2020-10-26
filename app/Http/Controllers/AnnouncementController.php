@@ -12,11 +12,25 @@ class AnnouncementController extends Controller
     public function getAnnouncement(Request $request)
     {
 
-        $result = DB::table('announcement')->where('id',$request->id)->get();
+        $result = DB::table('announcement')->where('id',1)->get();
         return json_encode(
             [
                 'resultCode' => 0,
                 'resultMessage' => '获取招生简介成功',
+                'data' => $result
+            ]
+        );
+    }
+
+    //后端获取文章
+    public function getArticle(Request $request)
+    {
+
+        $result = DB::table('announcement')->where('id',$request['id'])->get();
+        return json_encode(
+            [
+                'resultCode' => 0,
+                'resultMessage' => '获取成功',
                 'data' => $result
             ]
         );
@@ -34,7 +48,7 @@ class AnnouncementController extends Controller
         return json_encode(
             [
                 'resultCode' => 0,
-                'resultMessage' => '更新简介成功',
+                'resultMessage' => '更新成功',
                 'data' => $announcement
             ]
         );
